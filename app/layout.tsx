@@ -2,9 +2,15 @@ import { Metadata } from "next";
 
 // global css
 import "./styles/global.css";
+import { Work_Sans } from "next/font/google";
 
 // components
 import Header from "./components/header";
+
+const WorkSans = Work_Sans({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -17,7 +23,7 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className={WorkSans.className}>
         <Header />
         {children}
       </body>
