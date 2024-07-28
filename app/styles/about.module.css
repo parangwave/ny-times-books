@@ -1,4 +1,15 @@
 .container {
   text-align: center;
-  margin: 0 auto;
+  margin: 3rem auto 0 auto;
+}
+
+.container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.container p {
+  line-height: 120%;
+  font-size: 2rem;
+  font-weight: 500;
 }
