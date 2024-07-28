@@ -6,7 +6,7 @@ export const metadata = {
 };
 
 async function getGenres() {
-  return fetch(API_URL)
+  return fetch(`${API_URL}s`)
     .then((resp) => resp.json())
     .catch((error) => console.error(error));
 }
