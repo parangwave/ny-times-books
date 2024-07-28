@@ -1,0 +1,51 @@
+.books {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 0 1rem;
+}
+
+.book {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.book img {
+  width: 100%;
+}
+
+.book section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.book section > article {
+  display: block;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.book section > article > h1 {
+  font-size: 1.5rem;
+}
+
+.book section > article > h2 {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.book section > div > a {
+  display: inline-block;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.2s ease-in-out;
+  border-radius: 30px;
+  white-space: nowrap;
+  width: auto;
+  max-width: none; /* 부모 요소의 너비에 맞추는 것을 방지 */
+}
+
+.book section > div > a:hover {
+  transform: scale(1.05);
+}
