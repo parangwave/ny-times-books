@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -13,7 +17,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "baseUrl": "src",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "allowUmdGlobalAccess": true,
     "plugins": [
       {
@@ -28,7 +32,10 @@
     "**/**/*.ts",
     "**/**/*.tsx",
     "<path-to-your-source>.ts",
-    "<path-to-your-source>.tsx"
+    "<path-to-your-source>.tsx",
+    ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
