@@ -1,0 +1,27 @@
+.genres {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.genres li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  list-style: none;
+  transition: 0.2s ease-in-out;
+}
+
+.genres li a {
+  display: inline-block;
+}
+
+.genres li:hover {
+  transform: scale(1.05);
+}
