@@ -5,17 +5,12 @@
   font-weight: 700;
 }
 
-.header {
-  color: #fff;
-}
-
-.header ul {
+.container ul {
   display: flex;
   justify-content: space-around;
 }
 
-.header a {
+.container a {
   margin: 0 1rem;
-  color: #fff;
   text-decoration: none;
 }
