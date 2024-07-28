@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { API_URL } from "../constants";
+import styles from "../styles/genres.module.css";
 
 export const metadata = {
   title: "Home",
@@ -19,7 +20,7 @@ export default async function Home() {
   return (
     <main>
       {isStatusOk ? (
-        <ul>
+        <ul className={styles.genres}>
           {genres.map((genre) => (
             <li key={genre.list_name}>
               <Link href={`/list/${genre.list_name_encoded}`}>
