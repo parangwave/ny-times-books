@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { API_URL } from "../../../constants";
 import styles from "../../../styles/books.module.css";
+import Book from "../../../components/book";
 
 type IParams = {
   params: { id: string };
@@ -28,18 +28,13 @@ export default async function BookList({ params: { id } }: IParams) {
       {isStatusOk ? (
         <ul className={styles.books}>
           {books.map((book) => (
-            <li key={book.primary_isbn10} className={styles.book}>
-              <img src={book.book_image} alt={book.title} />
-              <section>
-                <article>
-                  <h1>{book.title}</h1>
-                  <h2>{book.author}</h2>
-                </article>
-                <div>
-                  <Link href={book.amazon_product_url}>Buy Now</Link>
-                </div>
-              </section>
-            </li>
+            <Book
+              key={book.primary_isbn10}
+              imageSrc={book.book_image}
+              title={book.title}
+              author={book.author}
+              amazonUrl={book.amazon_product_url}
+            />
           ))}
         </ul>
       ) : (
